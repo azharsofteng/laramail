@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contact',[ContactUsController::class,'store'])->name('contact.store');
+Route::post('contact',[ContactUsController::class,'store'])->name('contact.store');
