@@ -30,6 +30,7 @@ class ContactUsController extends Controller
             'message' => $request->message
         ];
         Mail::to("masudc614@gmail.com")->send(new ContactUsMail($data));
+        notify()->success('Thanks for Contact Us!');
         return redirect()->back()->withInput();
     }
 }
